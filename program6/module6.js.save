@@ -1,0 +1,16 @@
+var path= require('path');
+var fs=require('fs');
+myData=[];
+
+module.exports=function(fPath,ext,callback){
+  fs.readdir(fPath,function(err,files){
+    if(err) return callback(err);
+    
+    
+ if(path.extname(files[i]) === '.'+ext){
+      myData.append(files[i]);
+    }  
+   return callback(null,myData);
+  })
+}
+    
